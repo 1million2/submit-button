@@ -1,23 +1,39 @@
 {
-  "name": "zimex",
+  "name": "input-send-data",
   "version": "1.0.0",
   "description": "",
-  "main": "gulpfile.js",
+  "private": "true",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server --mode development",
+    "watch": "webpack --mode development --watch",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
   },
-  "author": "Eduard Makarichak",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1million2/submit-btn.git"
+  },
+  "author": "Eduard Makarichak <makarichak1209@gmail.com>",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1million2/submit-btn/issues"
+  },
+  "homepage": "https://github.com/1million2/submit-btn#readme",
   "devDependencies": {
-    "browser-sync": "^2.27.4",
-    "del": "^6.0.0",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^8.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-csso": "^4.0.1",
-    "gulp-file-include": "^2.3.0",
-    "gulp-htmlmin": "^5.0.1",
-    "gulp-sass": "^5.0.0",
-    "sass": "^1.35.2"
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^10.0.0",
+    "css-loader": "^6.5.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.4.5",
+    "node-sass": "^6.0.1",
+    "sass-loader": "^12.3.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.6.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
   }
 }
