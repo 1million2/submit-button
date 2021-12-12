@@ -3,7 +3,7 @@ import "./styles/style.css"
 import {formData} from "./modules/submitForm/submitForm";
 //Add form module
 const form = document.querySelector(".form");
-form.addEventListener("submit", formData );
+form.addEventListener("submit", formData);
 
 
 

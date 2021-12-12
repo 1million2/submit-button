@@ -10,19 +10,21 @@ export const formData = (e) => {
   buttonText.style.display = "none";
   spinner.classList.add("active");
 
-  const sendData = async (url) => {
-    const response = await fetch(url, {
+  const sendData = url => {
+    fetch(url, {
       method: "POST",
       body: new FormData(form)
     })
       .then(res => {
-        spinner.classList.remove("active");
-        buttonText.style.display = "block";
-        submitText.classList.add("active");
-        //удаление активного класса, который подтверждает успешный запрос
-        setTimeout(() => {
-          submitText.classList.remove("active");
-        }, 1000);
+        if (res.status == 201) {
+          spinner.classList.remove("active");
+          buttonText.style.display = "block";
+          submitText.classList.add("active");
+          //удаление активного класса, который подтверждает успешный запрос
+          setTimeout(() => {
+            submitText.classList.remove("active");
+          }, 1000);
+        }
       })
       .catch(err => {
         alert("Ошибка запроса: " + err.message)
@@ -32,5 +34,6 @@ export const formData = (e) => {
       })
     form.reset();
   }
+
   sendData('https://jsonplaceholder.typicode.com/posts');
 }

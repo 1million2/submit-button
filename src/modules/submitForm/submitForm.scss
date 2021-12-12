@@ -111,7 +111,7 @@ button.form__btn {
 
   &.active {
     display: flex;
-    animation: rotate 1s ease-out;
+    animation: rotate 1s ease-out infinite;
   }
 }
 

@@ -22,7 +22,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   resolve: {
-    extensions: [".js", ".json", ".svg", ".jpg", ".png"],
+    extensions: [".js", ".json"],
     alias: {
       "@": path.resolve(__dirname, 'src')
     }
